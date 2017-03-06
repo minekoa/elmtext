@@ -8,6 +8,8 @@ body {
 .editor_frame {
     position: relative;
     height: 100%;
+
+    background: Cornsilk;
 }
 
 .editor_textarea {
@@ -25,6 +27,7 @@ body {
     padding:0; margin:0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .editor_line {
@@ -42,7 +45,6 @@ body {
     width: 22px;
     left: 0;
     white-space: nowrap;
-    display: block;
 }
 
 .editor_num_col pre {
@@ -51,17 +53,19 @@ body {
 
 .editor_src_col {
     margin: 0; padding: 0;
+    width:100%;
+    overflow:hidden;
     text-align: left;
     background: pink;
 }
 
 .editor_src_col pre {
     margin: 0; padding: 0;
-
+    width:100%;
+    overflow:hidden;
     word-wrap: break-word;
     white-space: pre-wrap;
     word-break: normal;
-    display: block;
 }
                      
 
