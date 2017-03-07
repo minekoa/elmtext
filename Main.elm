@@ -51,7 +51,12 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div [ style [("margin", "0"), ("padding", "0"), ("width", "100%"), ("height", "100%")] ]
-        [ h1 [style [("margin", "0"),("box-sizing", "border-box"), ("height", "100px")]] [text "Editor Test"]
+        [ h1 [style [("margin", "0"),("box-sizing", "border-box"), ("height", "100px")]] [ text "Editor Test (L:"
+                                                                                         , text (toString model.editModel.cursor.line)
+                                                                                         , text ", C:"
+                                                                                         , text (toString model.editModel.cursor.column)
+                                                                                         , text ")"
+                                                                                         ]
         , div [style [("margin", "0"), ("padding", "0"), ("width", "100%"), ("height", "calc( 100% - 100px )")] ]
             [ Html.map SimpleEditMsg (SimpleEdit.view model.editModel)
             ]

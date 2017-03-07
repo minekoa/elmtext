@@ -69,4 +69,6 @@ body {
 }
                      
 
-
+.cur_front {
+    border: 1px solid black;
+}
